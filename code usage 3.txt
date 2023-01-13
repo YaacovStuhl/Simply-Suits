@@ -1,0 +1,33 @@
+1) I used many images inside divs to be able to give them box shadows, and put them behind the links on the z index to make them opaque separately from the text
+
+2)I used a 50% border-radius with padding to make a circular picture of myself (i.e. the ceo) and then imported a seaparate cursive font for the signature to make it look authentic
+
+3) I used separate table bodies to be able to add borders to each element in order to make the size chart clearer and more well aligned
+
+4)I used to classes on each of my links which are identical except that the hover class is black so that the user 
+can identify when they are on a link
+
+5) the smaller images are part of a flex box that allows them to be aligned sideways while also allowing the "see more" link at the end to allow further browsing
+
+6)the blurry load feature has a varaible load, that is incremented in the function "blurring", and a variable int hich is a setInterval funtion with
+the parameters of the blurring function and 30, and every time blurring runs, load is incremented, and if load is less than 99, then clearInterval, clears the parameter
+"int", and and we change the bg.style tag (which is the html element) and change the blur value with the scale function from stack overflow, and changes the px value of blur at the same time that the load 
+variable is incrementing
+
+7)The sticky nav has a css transition on 0.3 seconds with an ease in effect whose background default is black with white text, and an active class whose background is white and text is black
+and then we add an event listener which on a scroll will execute the funtion fixNav which has an if statement that if the Yaxis value is high enough, it will add the active class, and if not, remove it
+
+8)The image carousel has a constant that will bring in the image container and others that bring in the buttons
+and another that will get each individual image which takes each image from the container.
+Then it has an index variable and an interval with a parameter called run which is a function which is an accumulator for the index 
+variable. Then there is a function called chaangeImage with an if statement that if the index is greater than the index is greater than the length -1, then we reset the index variable, else-if the index is less than 0, then we set the index to the length -1
+after that, at each index, we activate the transition of the css class, which translates it over by 500 pixels, which is the size of each photo
+
+9) for the buttons the buttons have an eventListener which listens for a click which has a above function which has a clearInterval which resets the interval by calling the setInterval function with the parameters, run and 2000, then we call said function in the eventListener function and increment the index while calling the change image function, the left button has almost the same exact syntax, it just increments down instead of up
+
+
+10)The feedback boxes have a constant which querySelects all of teh .rating class, sendBtn which gets #send and panel which gets #panel.
+so we make an eventListener for the panel, since it is a parent of the button, and an if statement that checks if the target element is being clicked on, by checking is the parentNode.classList contains the class .rating in it
+and if it is clicked, it adds the active class which adds the box shadow, and calss a function called removeActive which has a for loop that for i, if i is less than the length of ratings, then ratings[i] will remove the active class, and i will increment each time.
+We then have a variable of selctedRating which is set to 'satisfied', and within the eventListener's if statement, we select the target and make it equal to selectedRating
+Then we have a senBtn eventListener that listens for a click and adds innerHTML to the ratingsContainer which add the reveiw text which takes in the variable of selctedRating at whatever it is now
